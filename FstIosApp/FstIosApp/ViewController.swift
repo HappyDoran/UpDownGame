@@ -10,6 +10,13 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var slider : UISlider!
+    @IBOutlet weak var tryCountLabel : UILabel!
+    @IBOutlet weak var sliderValueLabel: UILabel!
+    @IBOutlet weak var minimumValueLabel: UILabel!
+    @IBOutlet weak var maximumValueLabel: UILabel!
+    
+    var randomValue : Int = 0
+    var tryCount : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +29,7 @@ class ViewController: UIViewController {
     
     func reset(){
         print("reset!")
+        randomValue = Int.random(in: 0...30)
     }
 
     @IBAction func sliderValueChanged(_ sender : UISlider) {

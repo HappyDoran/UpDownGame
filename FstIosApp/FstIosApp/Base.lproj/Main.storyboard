@@ -103,7 +103,11 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <connections>
+                        <outlet property="maximumValueLabel" destination="m3Y-W6-MD8" id="YGu-U9-HV8"/>
+                        <outlet property="minimumValueLabel" destination="ukn-3G-K4A" id="CoI-QP-zNU"/>
                         <outlet property="slider" destination="ouE-Wv-ylW" id="gfv-0r-cvl"/>
+                        <outlet property="sliderValueLabel" destination="dZR-Gh-Kuf" id="Zor-CU-ME7"/>
+                        <outlet property="tryCountLabel" destination="BS7-VN-WRd" id="98s-MP-QCH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
