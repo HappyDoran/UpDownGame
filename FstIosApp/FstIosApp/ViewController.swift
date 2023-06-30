@@ -60,6 +60,21 @@ class ViewController: UIViewController {
         
         if randomValue == hitValue {
             print("맞췄어요!")
+            reset()
+            return
+        }
+        else if tryCount == 5 {
+            print("You lose...")
+            reset()
+            return
+        }
+        else if randomValue > hitValue {
+            slider.minimumValue = Float(hitValue)
+            minimumValueLabel.text = String(hitValue)
+        }
+        else {
+            slider.maximumValue = Float(hitValue)
+            maximumValueLabel.text = String(hitValue)
         }
         
     }
