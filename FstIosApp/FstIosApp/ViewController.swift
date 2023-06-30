@@ -49,6 +49,16 @@ class ViewController: UIViewController {
         let integerValue : Int = Int(sender.value)
         sliderValueLabel.text = String(integerValue)
     }
+    
+    func showAlert(message : String){
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let OKaction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.reset()
+        }
+        
+        alert.addAction(OKaction)
+        present(alert, animated: true,completion: nil)
+    }
 
     @IBAction func touchUpHitButton(_ sender : UIButton){
         print(slider.value)
@@ -59,12 +69,12 @@ class ViewController: UIViewController {
         tryCountLabel.text = "\(tryCount)/5"
         
         if randomValue == hitValue {
-            print("맞췄어요!")
+            showAlert(message: "You HIT!")
             reset()
             return
         }
         else if tryCount == 5 {
-            print("You lose...")
+            showAlert(message: "You lose...")
             reset()
             return
         }
