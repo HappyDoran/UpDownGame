@@ -58,6 +58,10 @@ class ViewController: UIViewController {
         tryCount = tryCount + 1
         tryCountLabel.text = "\(tryCount)/5"
         
+        if randomValue == hitValue {
+            print("맞췄어요!")
+        }
+        
     }
     
     @IBAction func touchUpResetButton(_ sender : UIButton){
